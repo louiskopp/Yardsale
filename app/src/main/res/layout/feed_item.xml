@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/feed_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="false"
+    android:descendantFocusability="blocksDescendants"
+    android:focusable="false"
+    android:focusableInTouchMode="false">
+
+
+    <ImageView
+        android:id="@+id/cellImage"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars[2]" />
+
+    <TextView
+        android:id="@+id/cellTitle"
+        android:layout_width="210dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Title"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        app:layout_constraintEnd_toStartOf="@+id/feed_price"
+        app:layout_constraintStart_toEndOf="@+id/cellImage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/feed_price"
+        android:layout_width="69dp"
+        android:layout_height="69dp"
+        android:layout_marginEnd="23dp"
+        android:text="$Price"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        app:layout_constraintEnd_toStartOf="@+id/cell"
+        app:layout_constraintHorizontal_bias="0.146"
+        app:layout_constraintStart_toEndOf="@+id/cell"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/cell"
+        android:layout_width="380dp"
+        android:layout_height="69dp"
+        android:fontFamily="casual"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

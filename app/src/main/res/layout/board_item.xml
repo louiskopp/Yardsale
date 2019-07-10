@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/board_name"
+        android:layout_width="150dp"
+        android:layout_height="38dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/board_click"
+        app:layout_constraintEnd_toStartOf="@+id/board_click"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/board_click"
+        app:layout_constraintTop_toTopOf="@+id/board_click" />
+
+    <TextView
+        android:id="@+id/board_click"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

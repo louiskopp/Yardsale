@@ -1,0 +1,57 @@
+apply plugin: 'com.android.library'
+//apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'com.github.dcendents.android-maven'
+
+android {
+    final sdk = rootProject.ext.sdk
+
+    compileSdkVersion sdk
+//    buildToolsVersion sdk
+
+    defaultConfig {
+        minSdkVersion sdk
+        targetSdkVersion sdk
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    resourcePrefix "ef_"
+}
+
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+artifacts {
+    archives sourcesJar
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    final glideVersion = '4.5.0'
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+    final supportLibraryVersion = '27.0.2'
+    implementation "com.android.support:recyclerview-v7:$supportLibraryVersion"
+    implementation("com.android.support:appcompat-v7:$supportLibraryVersion") {
+        exclude module: 'animated-vector-drawable'
+        exclude module: 'support-media-compat'
+    }
+    testImplementation 'junit:junit:4.12'
+}

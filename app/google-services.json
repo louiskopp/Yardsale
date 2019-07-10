@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "324085793157",
+    "firebase_url": "https://yardsale-1540414748518.firebaseio.com",
+    "project_id": "yardsale-1540414748518",
+    "storage_bucket": "yardsale-1540414748518.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:324085793157:android:ed01708bae881612",
+        "android_client_info": {
+          "package_name": "edu.hope.cs.yardsale"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "324085793157-peoetnf2cn09ui28bk49b32m6o5r7bom.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "edu.hope.cs.yardsale",
+            "certificate_hash": "d44c7f83f393850a3ae41f8a8f7a376c4e739de5"
+          }
+        },
+        {
+          "client_id": "324085793157-vejovjt6ajv5c91veqidvs7vp14g8hm6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDbuNeAYBS1_kpIcuFe67qze1Ztam7j_I"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "324085793157-vejovjt6ajv5c91veqidvs7vp14g8hm6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

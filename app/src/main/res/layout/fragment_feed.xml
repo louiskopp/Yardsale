@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.feed">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/wallet_toolbar"
+        style="@style/Toolbar"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <RelativeLayout
+            android:id="@+id/feed_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/settingsBtn"
+                style="@style/SettingsText"
+                android:fontFamily="casual"
+                android:text="Feed"
+                android:textAppearance="@android:style/TextAppearance.Material.Large"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/feed_add"
+                style="@style/addButton" />
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <ListView
+        android:id="@+id/feed_listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wallet_toolbar" />
+</android.support.constraint.ConstraintLayout>

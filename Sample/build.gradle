@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+
+android {
+    final sdk = rootProject.ext.sdk
+
+    compileSdkVersion sdk
+    //buildToolsVersion sdk.buildTools
+
+    defaultConfig {
+        minSdkVersion sdk
+        targetSdkVersion sdk
+
+        applicationId "com.esafirm.imagepicker.sample"
+
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+repositories {
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    final glideVersion = '4.5.0'
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+    implementation 'com.android.support:appcompat-v7:27.0.2'
+
+    /* Development */
+    implementation project(':rximagepicker')
+    implementation project(':imagepicker')
+
+    /* Release Check */
+//    final imagePickerVersion = '1.11.0-0'
+//    compile "com.github.esafirm.android-image-picker:imagepicker:${imagePickerVersion}"
+//    compile "com.github.esafirm.android-image-picker:rximagepicker:${imagePickerVersion}"
+}
